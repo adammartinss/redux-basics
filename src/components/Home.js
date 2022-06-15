@@ -2,12 +2,12 @@ import React from 'react'
 import {useSelector} from 'react-redux'
 
 import Lists from './Lists'
+import Foods from './Foods'
 import Input from './Input'
 
 function Home() {
-    
-    const name=useSelector((state)=>state.nameReducer.name)
-    const lists = useSelector(state=>state.listsReducer.lists)
+    // getting a redux state to component
+    const name=useSelector((state) => state.nameReducer.name)
 
 	return (
 		<div className='home'>
@@ -16,13 +16,13 @@ function Home() {
                
 
                 </h1>
-				<p>Name: {name} </p>
+				<p>Name: {name}</p>
 			</div>
 
 			<div className='home__children'>
 				{/* Lists component  */}
 				<Lists />
-
+                <Foods />
 				{/* //TODO HOMEWORK, render food item component  */}
 
 				{/* Input component  */}

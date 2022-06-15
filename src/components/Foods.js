@@ -1,13 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-function Lists() {
-    const lists = useSelector(state => state.listsReducer.lists);
-
+function Foods() {
+    const foods = useSelector((state) => state.foodListReducer.foods);
     return (
         <div className="lists">
-            <h2>Lists</h2>
-            {lists.map((item, id) => (
+            <h2>Food Lists</h2>
+            {foods.map((item, id) => (
                 <div key={id} className="list__item">
                     <p>{item}</p>
                 </div>
@@ -16,4 +15,4 @@ function Lists() {
     );
 }
 
-export default Lists;
+export default Foods;
